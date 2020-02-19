@@ -1,0 +1,19 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.address %></p>
+
+
+<% @restaurant.reviews.each do |review| %>
+<%= review.content %>
+
+
+<% "#{review.rating}".to_i.times do %>
+  <i class="fa fa-star" aria-hidden="true"></i>
+  <% end %>
+<br><br>
+<% end %>
+
+
+<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+<%= link_to "Go back", restaurants_path, class: "btn btn-primary" %>
+

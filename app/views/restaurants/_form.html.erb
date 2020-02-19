@@ -1,0 +1,25 @@
+<%= form_for(@restaurant) do |f| %>
+
+  <div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control'%>
+
+  <%= f.label :address %>
+  <%= f.text_field :address, class: 'form-control' %>
+
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number, class: 'form-control' %>
+
+  <%= f.label :category %>
+  <%= f.text_field :category, class: 'form-control' %>
+  </div>
+
+<!--   <% unless f.object.new_record?()  %>
+  <label> <%= t.check_box :completed %> Completed</label>
+  <% end %>
+ -->
+
+
+  <%= f.submit %>
+
+  <% end %>
